@@ -696,6 +696,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
+  wanderTime: 5
+  wanderRad: 20
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

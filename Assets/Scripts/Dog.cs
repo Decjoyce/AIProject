@@ -8,6 +8,10 @@ public class Dog : MonoBehaviour
     public NavMeshAgent agent;
     private Transform target;
     private bool onPursuit;
+    private float timer;
+    public float wanderTime;
+    public float wanderRad;
+    bool isWandering;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +23,11 @@ public class Dog : MonoBehaviour
     {
         if(onPursuit)
             agent.SetDestination(target.position);
+        else
+        {
+            timer += Time.deltaTime;
+            Wander();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,6 +36,18 @@ public class Dog : MonoBehaviour
         {
             target = other.transform;
             onPursuit = true;
+        }
+    }
+
+    void Wander()
+    {
+        if (timer >= wanderTime)
+        {
+            
+            Vector2 wanderTarget = Random.insideUnitCircle * wanderRad;
+            Vector3 wanderPos3D = new Vector3(transform.position.x + wanderTarget.x, transform.position.y, transform.position.z + wanderTarget.y);
+            agent.SetDestination(wanderPos3D);
+            timer = 0;
         }
     }
 
