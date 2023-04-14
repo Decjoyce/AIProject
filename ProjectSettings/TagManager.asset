@@ -6,6 +6,7 @@ TagManager:
   tags:
   - dog
   - sheep
+  - Gate
   layers:
   - Default
   - TransparentFX

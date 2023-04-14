@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Assertions.Must;
@@ -11,8 +12,9 @@ public class SheepyCode : MonoBehaviour
 
     private NavMeshAgent _navMeshAgent;
     //public Transform otherPlayer;
-    
+    private bool Run;
     public float timer, wanderTime;
+    public GameObject gate;
     
     public enum State
     {
@@ -90,5 +92,13 @@ public class SheepyCode : MonoBehaviour
     public void SetState(string newState)
     {
         currentState = (State) Enum.Parse(typeof(State), newState) ;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("dog"))
+        {
+            _navMeshAgent.SetDestination(gate.transform.position);
+        }
     }
 }
