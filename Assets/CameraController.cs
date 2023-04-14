@@ -110,7 +110,8 @@ public class CameraController : MonoBehaviour
     public void ChangeDog()
     {
         dogNum++;
-        Mathf.Clamp(dogNum, 0, dogs.Count);
+        if (dogNum >= dogs.Count)
+            dogNum = 0;
         dogCam.LookAt = dogs[dogNum].transform;
         dogCam.Follow = dogs[dogNum].transform;
     }
