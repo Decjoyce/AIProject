@@ -812,7 +812,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503253418}
-  m_LocalRotation: {x: -0.01138219, y: 0.97017473, z: -0.23763864, w: -0.046468507}
+  m_LocalRotation: {x: -0.011382186, y: 0.97017473, z: -0.23763862, w: -0.046468493}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1466,6 +1466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 5
   wanderTime: 20
+  gate: {fileID: 1324267808}
 --- !u!136 &848314078
 CapsuleCollider:
   m_ObjectHideFlags: 0

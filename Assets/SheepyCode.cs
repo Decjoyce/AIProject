@@ -12,7 +12,7 @@ public class SheepyCode : MonoBehaviour
 
     private NavMeshAgent _navMeshAgent;
     //public Transform otherPlayer;
-    private bool Run;
+    private bool IsChased;
     public float timer, wanderTime;
     public GameObject gate;
     
@@ -67,8 +67,13 @@ public class SheepyCode : MonoBehaviour
             }
             
         }
+
+        if (!IsChased)
+        {
+            Wander();
+        }
         
-        Wander();
+       
     }
 
     private void SetAITargetLocation(Vector3 targetLocation)
@@ -98,7 +103,9 @@ public class SheepyCode : MonoBehaviour
     {
         if (other.CompareTag("dog"))
         {
-            _navMeshAgent.SetDestination(gate.transform.position);
+            IsChased = true;
+            _navMeshAgent.SetDestination(gate.transform.position); 
         }
+        
     }
 }
