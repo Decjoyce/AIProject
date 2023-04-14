@@ -5,8 +5,26 @@ using Cinemachine;
 
 public class CameraController : MonoBehaviour
 {
+    #region Singleton
+
+    public static CameraController instance;
+
+    private void Awake()
+    {
+        if(instance != null)
+        {
+            Debug.LogWarning("More than one Instance found");
+            return;
+        }
+        instance = this;
+    }
+    #endregion
+
     public GameObject dawg;
     public GameObject sheepy;
+
+    public GameObject dogHolder;
+    public GameObject sheepHolder;
 
     public CinemachineVirtualCamera tdCam;
     public CinemachineFreeLook sheepCam;
@@ -69,14 +87,14 @@ public class CameraController : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out RaycastHit hit))
-                Instantiate(dawg, hit.point, new Quaternion(0, 0, 0, 0));
+                Instantiate(dawg, hit.point, new Quaternion(0, 0, 0, 0), dogHolder.transform);
         }
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out RaycastHit hit))
-                Instantiate(sheepy, hit.point, new Quaternion(0, 0, 0, 0));
+                Instantiate(sheepy, hit.point, new Quaternion(0, 0, 0, 0), sheepHolder.transform);
         }
     }
 
@@ -115,5 +133,5 @@ public class CameraController : MonoBehaviour
         dogCam.LookAt = dogs[dogNum].transform;
         dogCam.Follow = dogs[dogNum].transform;
     }
-
+    
 }
