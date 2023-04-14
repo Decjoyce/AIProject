@@ -749,7 +749,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503253418}
-  m_LocalRotation: {x: -0.011382186, y: 0.97017473, z: -0.23763862, w: -0.046468493}
+  m_LocalRotation: {x: -0.01138219, y: 0.97017473, z: -0.23763864, w: -0.046468507}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1364,7 +1364,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763147979}
-  m_LocalRotation: {x: 0.1431694, y: 0.6924613, z: -0.14316946, w: 0.6924612}
+  m_LocalRotation: {x: 0.1431694, y: 0.6924613, z: -0.14316945, w: 0.6924612}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1452,7 +1452,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870704352}
-  m_LocalRotation: {x: -0.010535072, y: 0.97433674, z: -0.21995233, w: -0.046667874}
+  m_LocalRotation: {x: -0.010535065, y: 0.97433674, z: -0.21995233, w: -0.04666784}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3033,7 +3033,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057577348}
-  m_LocalRotation: {x: -0.009686716, y: 0.97816664, z: -0.20224026, w: -0.046851326}
+  m_LocalRotation: {x: -0.009686708, y: 0.97816664, z: -0.20224026, w: -0.04685129}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3053,6 +3053,10 @@ PrefabInstance:
       propertyPath: gate
       value: 
       objectReference: {fileID: 1324267808}
+    - target: {fileID: 848314078, guid: fdea25f499e0a96478373e3a899675ab, type: 3}
+      propertyPath: m_Radius
+      value: 5.56
+      objectReference: {fileID: 0}
     - target: {fileID: 1721549020333369334, guid: fdea25f499e0a96478373e3a899675ab, type: 3}
       propertyPath: m_RootOrder
       value: 6
