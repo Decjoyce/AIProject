@@ -23,20 +23,20 @@ public class SheepyCode : MonoBehaviour
         Idle,
     }
 
-    private State currentState;
+   // private State currentState;
     
     // Start is called before the first frame update
     void Start()
     {
         CameraController.instance.sheep.Add(gameObject);
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        currentState = State.FindCharacter;
+       // currentState = State.FindCharacter;
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch (currentState)
+       /* switch (currentState)
         {
             case State.FindCharacter:
                     
@@ -56,9 +56,9 @@ public class SheepyCode : MonoBehaviour
             case State.Idle:
 
                 break;
-        }
+        }*/
         
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit))
@@ -66,7 +66,7 @@ public class SheepyCode : MonoBehaviour
                 SetAITargetLocation(hit.point);    
             }
             
-        }
+        }*/
 
         if (!IsChased)
         {
@@ -94,10 +94,10 @@ public class SheepyCode : MonoBehaviour
         }
     }
 
-    public void SetState(string newState)
-    {
-        currentState = (State) Enum.Parse(typeof(State), newState) ;
-    }
+    //public void SetState(string newState)
+   // {
+       // currentState = (State) Enum.Parse(typeof(State), newState) ;
+   // }
 
     private void OnTriggerEnter(Collider other)
     {
