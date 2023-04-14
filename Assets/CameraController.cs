@@ -5,12 +5,18 @@ using Cinemachine;
 
 public class CameraController : MonoBehaviour
 {
+    public GameObject dawg;
+    public GameObject sheepy;
+
     public CinemachineVirtualCamera tdCam;
     public CinemachineFreeLook sheepCam;
     public CinemachineFreeLook dogCam;
 
-    public GameObject[] sheep;
-    public GameObject[] dogs;
+    public List<GameObject> sheep = new List<GameObject>();
+    public List<GameObject> dogs = new List<GameObject>();
+
+    int sheepNum;
+    int dogNum;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +24,8 @@ public class CameraController : MonoBehaviour
         tdCam.Priority = 1;
         sheepCam.Priority = 0;
         dogCam.Priority = 0;
+        sheepCam.LookAt = sheep[0].transform;
+        sheepCam.Follow = sheep[0].transform;
     }
 
     private void Update()
@@ -40,24 +48,36 @@ public class CameraController : MonoBehaviour
             sheepCam.Priority = 0;
             dogCam.Priority = 1;
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             ChangeCamera();
         }
 
-        if(tdCam.Priority != 0)
+        if(tdCam.Priority == 0)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (dogCam.Priority == 1)
                     ChangeDog();
-
-                if (sheepCam.Priority == 1)
+                else if (sheepCam.Priority == 1)
                     ChangeSheep();
             }
         }
 
+        if (Input.GetMouseButtonDown(1))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
+            if (Physics.Raycast(ray, out RaycastHit hit))
+                Instantiate(dawg, hit.point, new Quaternion(0, 0, 0, 0));
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out RaycastHit hit))
+                Instantiate(sheepy, hit.point, new Quaternion(0, 0, 0, 0));
+        }
     }
 
     public void ChangeCamera()
@@ -81,11 +101,18 @@ public class CameraController : MonoBehaviour
 
     public void ChangeSheep()
     {
-
+        sheepNum++;
+        if (sheepNum >= sheep.Count)
+            sheepNum = 0;
+        sheepCam.LookAt = sheep[sheepNum].transform;
+        sheepCam.Follow = sheep[sheepNum].transform;
     }    
     public void ChangeDog()
     {
-
+        dogNum++;
+        Mathf.Clamp(dogNum, 0, dogs.Count);
+        dogCam.LookAt = dogs[dogNum].transform;
+        dogCam.Follow = dogs[dogNum].transform;
     }
 
 }
