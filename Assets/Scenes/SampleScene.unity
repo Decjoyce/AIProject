@@ -585,6 +585,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &305620991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 305620992}
+  m_Layer: 0
+  m_Name: SheepHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &305620992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305620991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &447607862
 GameObject:
   m_ObjectHideFlags: 3
@@ -1502,7 +1533,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870704352}
-  m_LocalRotation: {x: -0.010535065, y: 0.97433674, z: -0.21995233, w: -0.04666784}
+  m_LocalRotation: {x: -0.010535072, y: 0.97433674, z: -0.21995233, w: -0.046667874}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2138,14 +2169,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dawg: {fileID: 618589613}
   sheepy: {fileID: 1721549020333369337, guid: fdea25f499e0a96478373e3a899675ab, type: 3}
+  dogHolder: {fileID: 1857958720}
+  sheepHolder: {fileID: 305620991}
   tdCam: {fileID: 744212775}
   sheepCam: {fileID: 580430619}
   dogCam: {fileID: 972504124}
   sheep:
   - {fileID: 263701022}
   - {fileID: 848314070}
-  dogs:
-  - {fileID: 618589613}
+  dogs: []
 --- !u!4 &1308905228
 Transform:
   m_ObjectHideFlags: 0
@@ -2872,6 +2904,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842523783}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1857958720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1857958721}
+  m_Layer: 0
+  m_Name: DogHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1857958721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857958720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2057577348
 GameObject:
   m_ObjectHideFlags: 3
@@ -3144,6 +3207,10 @@ PrefabInstance:
     - target: {fileID: 3395540029215463974, guid: 16a1f3776ec9e40418efb3165f336d4a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395540029215463993, guid: 16a1f3776ec9e40418efb3165f336d4a, type: 3}
+      propertyPath: m_Radius
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a1f3776ec9e40418efb3165f336d4a, type: 3}

@@ -11,11 +11,11 @@ public class Dog : MonoBehaviour
     private float timer;
     public float wanderTime;
     public float wanderRad;
-    bool isWandering;
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        CameraController.instance.dogs.Add(gameObject);
     }
 
     // Update is called once per frame
