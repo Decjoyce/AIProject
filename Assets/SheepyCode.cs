@@ -10,7 +10,7 @@ public class SheepyCode : MonoBehaviour
 {
 
     private NavMeshAgent _navMeshAgent;
-    public Transform otherPlayer;
+    //public Transform otherPlayer;
     
     public float timer, wanderTime;
     
@@ -26,6 +26,7 @@ public class SheepyCode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CameraController.instance.sheep.Add(gameObject);
         _navMeshAgent = GetComponent<NavMeshAgent>();
         currentState = State.FindCharacter;
     }
@@ -37,7 +38,7 @@ public class SheepyCode : MonoBehaviour
         {
             case State.FindCharacter:
                     
-                SetAITargetLocation(otherPlayer.position);
+                //SetAITargetLocation(otherPlayer.position);
                 
                 if (_navMeshAgent.remainingDistance < 1f && _navMeshAgent.remainingDistance > 0.5f)
                 {
