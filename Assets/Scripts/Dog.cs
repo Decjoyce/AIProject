@@ -21,12 +21,22 @@ public class Dog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(onPursuit)
+        if (onPursuit)
+        {
             agent.SetDestination(target.position);
+            if (target.position.z < -50)
+            {
+                onPursuit = false;
+            }
+        }
         else
         {
             timer += Time.deltaTime;
             Wander();
+        }
+        if(transform.position.z <= -50)
+        {
+            agent.SetDestination(Vector3.zero);
         }
     }
 
@@ -46,7 +56,13 @@ public class Dog : MonoBehaviour
             
             Vector2 wanderTarget = Random.insideUnitCircle * wanderRad;
             Vector3 wanderPos3D = new Vector3(transform.position.x + wanderTarget.x, transform.position.y, transform.position.z + wanderTarget.y);
-            agent.SetDestination(wanderPos3D);
+            if(transform.position.z + wanderTarget.y <= -50)
+            {
+                wanderTarget = Random.insideUnitCircle * wanderRad;
+                wanderPos3D = new Vector3(transform.position.x + wanderTarget.x, transform.position.y, transform.position.z + wanderTarget.y);
+            }
+            else
+                agent.SetDestination(wanderPos3D);
             timer = 0;
         }
     }

@@ -25,6 +25,7 @@ public class CameraController : MonoBehaviour
 
     public GameObject dogHolder;
     public GameObject sheepHolder;
+    public GameObject gate;
 
     public CinemachineVirtualCamera tdCam;
     public CinemachineFreeLook sheepCam;
@@ -48,54 +49,61 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (!GameManagment.instance.paused)
         {
-            tdCam.Priority = 1;
-            sheepCam.Priority = 0;
-            dogCam.Priority = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            tdCam.Priority = 0;
-            sheepCam.Priority = 1;
-            dogCam.Priority = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            tdCam.Priority = 0;
-            sheepCam.Priority = 0;
-            dogCam.Priority = 1;
-        }
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            ChangeCamera();
-        }
-
-        if(tdCam.Priority == 0)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                if (dogCam.Priority == 1)
-                    ChangeDog();
-                else if (sheepCam.Priority == 1)
-                    ChangeSheep();
+                tdCam.Priority = 1;
+                sheepCam.Priority = 0;
+                dogCam.Priority = 0;
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                tdCam.Priority = 0;
+                sheepCam.Priority = 1;
+                dogCam.Priority = 0;
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                tdCam.Priority = 0;
+                sheepCam.Priority = 0;
+                dogCam.Priority = 1;
+            }
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                ChangeCamera();
+            }
+
+            if (tdCam.Priority == 0)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    if (dogCam.Priority == 1)
+                        ChangeDog();
+                    else if (sheepCam.Priority == 1)
+                        ChangeSheep();
+                }
+            }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out RaycastHit hit))
+                {
+                    if (hit.transform.position.z > -50)
+                        Instantiate(dawg, hit.point, new Quaternion(0, 0, 0, 0), dogHolder.transform);
+                }
+            }
+            if (Input.GetMouseButtonDown(0))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out RaycastHit hit))
+                {
+                    Instantiate(sheepy, hit.point, new Quaternion(0, 0, 0, 0), sheepHolder.transform);
+                }
             }
         }
 
-        if (Input.GetMouseButtonDown(1))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out RaycastHit hit))
-                Instantiate(dawg, hit.point, new Quaternion(0, 0, 0, 0), dogHolder.transform);
-        }
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out RaycastHit hit))
-                Instantiate(sheepy, hit.point, new Quaternion(0, 0, 0, 0), sheepHolder.transform);
-        }
     }
 
     public void ChangeCamera()

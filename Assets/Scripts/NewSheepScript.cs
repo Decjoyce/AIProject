@@ -10,20 +10,18 @@ public class NewSheepScript : MonoBehaviour
     private float timer;
     public float wanderTime;
     public float wanderRad;
-    private bool Ischased;
-    public GameObject gate;
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        CameraController.instance.dogs.Add(gameObject);
+        CameraController.instance.sheep.Add(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
         if(onPursuit)
-            agent.SetDestination(gate.transform.position);
+            agent.SetDestination(target.position);
         else
         {
             timer += Time.deltaTime;
@@ -35,8 +33,16 @@ public class NewSheepScript : MonoBehaviour
     {
         if (other.CompareTag("dog"))
         {
-            
+            target = CameraController.instance.gate.transform;
             onPursuit = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("dog"))
+        {
+            onPursuit = false;
         }
     }
 
@@ -44,7 +50,6 @@ public class NewSheepScript : MonoBehaviour
     {
         if (timer >= wanderTime)
         {
-            
             Vector2 wanderTarget = Random.insideUnitCircle * wanderRad;
             Vector3 wanderPos3D = new Vector3(transform.position.x + wanderTarget.x, transform.position.y, transform.position.z + wanderTarget.y);
             agent.SetDestination(wanderPos3D);

@@ -142,7 +142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721549019849808650}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.15, z: -0.7}
+  m_LocalPosition: {x: 0, y: 0.15, z: 0.7}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -208,11 +208,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1721549020333369334}
-  - component: {fileID: 1721549020333369335}
   - component: {fileID: 1721549020333369336}
   - component: {fileID: 848314078}
   - component: {fileID: 848314076}
-  - component: {fileID: 848314077}
+  - component: {fileID: 848314074}
   m_Layer: 0
   m_Name: Sheepy (1)
   m_TagString: sheep
@@ -236,19 +235,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1721549020333369335
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721549020333369337}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &1721549020333369336
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -275,7 +261,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.76
+  m_Radius: 5.56
   m_Height: 5.52
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -288,20 +274,20 @@ NavMeshAgent:
   m_GameObject: {fileID: 1721549020333369337}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1
   m_Speed: 8
   m_Acceleration: 8
-  avoidancePriority: 50
+  avoidancePriority: 89
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &848314077
+--- !u!114 &848314074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -310,9 +296,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1721549020333369337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 053c8457e6da65a4293235a609c41ad7, type: 3}
+  m_Script: {fileID: 11500000, guid: d3f3258959805184d9f25eb909f006ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 5
-  wanderTime: 20
-  gate: {fileID: 0}
+  agent: {fileID: 0}
+  wanderTime: 5.21
+  wanderRad: 3.04
