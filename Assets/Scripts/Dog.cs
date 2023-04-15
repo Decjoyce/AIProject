@@ -42,7 +42,7 @@ public class Dog : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("sheep"))
+        if (other.CompareTag("sheep") && other.transform.position.z > -50)
         {
             target = other.transform;
             onPursuit = true;

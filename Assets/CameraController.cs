@@ -90,8 +90,11 @@ public class CameraController : MonoBehaviour
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out RaycastHit hit))
                 {
-                    if (hit.transform.position.z > -50)
-                        Instantiate(dawg, hit.point, new Quaternion(0, 0, 0, 0), dogHolder.transform);
+                    if (!hit.transform.CompareTag("Ground"))
+                    {
+                        if (hit.transform.position.z > -50)
+                            Instantiate(dawg, new Vector3(hit.point.x, 0, hit.point.z), new Quaternion(0, 0, 0, 0), dogHolder.transform);
+                    }
                 }
             }
             if (Input.GetMouseButtonDown(0))
@@ -99,7 +102,10 @@ public class CameraController : MonoBehaviour
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out RaycastHit hit))
                 {
-                    Instantiate(sheepy, hit.point, new Quaternion(0, 0, 0, 0), sheepHolder.transform);
+                    if (!hit.transform.CompareTag("Ground"))
+                    {
+                        Instantiate(sheepy, new Vector3(hit.point.x, 0, hit.point.z), new Quaternion(0, 0, 0, 0), sheepHolder.transform);
+                    }
                 }
             }
         }
