@@ -10208,7 +10208,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Dogs will wrangle up the sheep to the next field.
+  m_text: 'The Dogs will wrangle up the Sheep into the containment pen, where they
+    await slaughtering so they can be turned into mutton and sold at your nearest
+    butchers
 
 '
   m_isRightToLeft: 0
@@ -10237,8 +10239,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.5
-  m_fontSizeBase: 23.5
+  m_fontSize: 22.1
+  m_fontSizeBase: 22.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
