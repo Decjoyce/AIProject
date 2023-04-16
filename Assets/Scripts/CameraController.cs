@@ -35,7 +35,7 @@ public class CameraController : MonoBehaviour
     public List<GameObject> dogs = new List<GameObject>();
 
     int sheepNum;
-    int dogNum;
+    int dogNum = -1;
 
     // Start is called before the first frame update
     void Start()
@@ -93,7 +93,10 @@ public class CameraController : MonoBehaviour
                     if (!hit.transform.CompareTag("Ground"))
                     {
                         if (hit.transform.position.z > -50)
+                        {
                             Instantiate(dawg, new Vector3(hit.point.x, 0, hit.point.z), new Quaternion(0, 0, 0, 0), dogHolder.transform);
+                        }
+                            
                     }
                 }
             }
@@ -108,6 +111,8 @@ public class CameraController : MonoBehaviour
                     }
                 }
             }
+            if (dogs.Count == 1)
+                ChangeDog();
         }
 
     }
