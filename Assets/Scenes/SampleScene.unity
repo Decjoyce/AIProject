@@ -1042,7 +1042,6 @@ GameObject:
   - component: {fileID: 165967980}
   - component: {fileID: 165967983}
   - component: {fileID: 165967982}
-  - component: {fileID: 165967981}
   m_Layer: 0
   m_Name: Cylinder (2)
   m_TagString: Untagged
@@ -1065,20 +1064,6 @@ Transform:
   m_Father: {fileID: 125261842}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &165967981
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 165967979}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &165967982
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2338,7 +2323,6 @@ GameObject:
   - component: {fileID: 401309127}
   - component: {fileID: 401309130}
   - component: {fileID: 401309129}
-  - component: {fileID: 401309128}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -2361,20 +2345,6 @@ Transform:
   m_Father: {fileID: 125261842}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &401309128
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401309126}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &401309129
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6022,7 +5992,6 @@ GameObject:
   - component: {fileID: 947804864}
   - component: {fileID: 947804867}
   - component: {fileID: 947804866}
-  - component: {fileID: 947804865}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -6045,19 +6014,6 @@ Transform:
   m_Father: {fileID: 125261842}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &947804865
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 947804863}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &947804866
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6878,7 +6834,6 @@ GameObject:
   - component: {fileID: 1028381238}
   - component: {fileID: 1028381241}
   - component: {fileID: 1028381240}
-  - component: {fileID: 1028381239}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Untagged
@@ -6901,19 +6856,6 @@ Transform:
   m_Father: {fileID: 125261842}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1028381239
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028381237}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1028381240
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7557,7 +7499,6 @@ GameObject:
   - component: {fileID: 1177274947}
   - component: {fileID: 1177274950}
   - component: {fileID: 1177274949}
-  - component: {fileID: 1177274948}
   m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
@@ -7580,20 +7521,6 @@ Transform:
   m_Father: {fileID: 125261842}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1177274948
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1177274946}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1177274949
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8533,8 +8460,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -41}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 475, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1425052862
 MonoBehaviour:
@@ -8556,17 +8483,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Farm with the Sheep
+  m_text: Sheep Wranglers
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278253311
+  m_fontColor: {r: 1, g: 0.9644864, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8583,10 +8510,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 36
+  m_fontSize: 37
+  m_fontSizeBase: 37
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 17
@@ -9171,7 +9098,6 @@ GameObject:
   - component: {fileID: 1522498912}
   - component: {fileID: 1522498915}
   - component: {fileID: 1522498914}
-  - component: {fileID: 1522498913}
   m_Layer: 0
   m_Name: Sphere (5)
   m_TagString: Untagged
@@ -9194,19 +9120,6 @@ Transform:
   m_Father: {fileID: 125261842}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1522498913
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522498911}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1522498914
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9879,7 +9792,6 @@ GameObject:
   - component: {fileID: 1628211077}
   - component: {fileID: 1628211080}
   - component: {fileID: 1628211079}
-  - component: {fileID: 1628211078}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Untagged
@@ -9902,19 +9814,6 @@ Transform:
   m_Father: {fileID: 125261842}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1628211078
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628211076}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1628211079
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10938,7 +10837,6 @@ GameObject:
   - component: {fileID: 1750326478}
   - component: {fileID: 1750326481}
   - component: {fileID: 1750326480}
-  - component: {fileID: 1750326479}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Untagged
@@ -10961,19 +10859,6 @@ Transform:
   m_Father: {fileID: 125261842}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1750326479
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750326477}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1750326480
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11884,7 +11769,6 @@ GameObject:
   - component: {fileID: 1890742596}
   - component: {fileID: 1890742599}
   - component: {fileID: 1890742598}
-  - component: {fileID: 1890742597}
   m_Layer: 0
   m_Name: Sphere (4)
   m_TagString: Untagged
@@ -11907,19 +11791,6 @@ Transform:
   m_Father: {fileID: 125261842}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1890742597
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890742595}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1890742598
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12478,7 +12349,6 @@ GameObject:
   - component: {fileID: 2047276016}
   - component: {fileID: 2047276019}
   - component: {fileID: 2047276018}
-  - component: {fileID: 2047276017}
   m_Layer: 0
   m_Name: Cylinder (3)
   m_TagString: Untagged
@@ -12501,20 +12371,6 @@ Transform:
   m_Father: {fileID: 125261842}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2047276017
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047276015}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &2047276018
 MeshRenderer:
   m_ObjectHideFlags: 0
