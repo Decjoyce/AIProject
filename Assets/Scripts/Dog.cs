@@ -34,7 +34,7 @@ public class Dog : MonoBehaviour
             timer += Time.deltaTime;
             Wander();
         }
-        if(transform.position.z <= -50)
+        if(transform.position.z <= -40)
         {
             agent.SetDestination(Vector3.zero);
         }
